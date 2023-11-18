@@ -35,3 +35,8 @@ This is just a live streaming project building for my channel:
 - [x] Upstash Rate limit
 - [x] wretch Setup
 - [x] speaker Setup
+- [] These are must haves in any production app:
+  - [] Great CWV Scores for real world users - image optimisation, LCP (core), FID (deprecated core metric from 2024 March), INP (new core metric), FCP, TBT, TTFB, CLS (core)
+  - [] Proper analytics
+  - [] Accessibility - vast topic, so standard level accessibility should be the aim for the starter.
+  - [] Proper SEO - sitemaps, robots, metadata, etc.
