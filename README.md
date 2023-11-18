@@ -26,10 +26,10 @@ This is just a live streaming project building for my channel:
 5. Terms and Conditions
 6. About Us
 
-{
-"sub": "github|130237132",
-"nickname": "codedusting",
-"name": "codedusting",
-"picture": "https://avatars.githubusercontent.com/u/130237132?v=4",
-"updated_at": "2023-11-18T11:31:27.361Z"
-}
+## Checklist
+
+- [x] Initial Next Setup
+- [x] Auth0 setup
+- [] PlanetScale Database Setup with Drizzle ORM
+- [] Google Tag Manager Setup with @next/third-parties
+- []

@@ -1,3 +1,5 @@
+import ClientLogo from "@/components/client/clientLogo";
+import Logo from "@/components/server/logo";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -16,6 +18,7 @@ export default function MarketingPage() {
 				<Button variant="secondary" asChild>
 					<Link href="/api/auth/logout">Get started for free</Link>
 				</Button>
+				<ClientLogo logo={<Logo />} />
 			</section>
 			<section className="h-full w-full bg-blue-200"></section>
 		</main>

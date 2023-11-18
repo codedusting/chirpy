@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
+import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					{children}
 				</body>
 			</UserProvider>
+			<GoogleTagManager gtmId="GTM-NCPK38S2" />
 		</html>
 	);
 }
