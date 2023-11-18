@@ -17,11 +17,14 @@
 		"@planetscale/database": "^1.11.0",
 		"@radix-ui/react-slot": "^1.0.2",
 		"@radix-ui/react-toast": "^1.1.5",
+		"@upstash/ratelimit": "^0.4.4",
+		"@upstash/redis": "^1.25.1",
 		"drizzle-orm": "^0.29.0",
 		"lucide-react": "^0.292.0",
 		"next": "14.0.3",
 		"react": "^18",
 		"react-dom": "^18",
+		"wretch": "^2.7.0",
 		"zod": "^3.22.4"
 	},
 	"devDependencies": {

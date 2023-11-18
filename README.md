@@ -30,10 +30,8 @@ This is just a live streaming project building for my channel:
 
 - [x] Initial Next Setup
 - [x] Auth0 setup
-- [] PlanetScale Database Setup with Drizzle ORM
+- [x] PlanetScale Database Setup with Drizzle ORM
 - [x] Google Tag Manager Setup with @next/third-parties
-- [] Upstash Rate limit
-<!--  "@upstash/ratelimit": "^0.4.4",
-    "@upstash/redis": "^1.25.1", -->
-- [] wretch Setup
-- [] speaker Setup
+- [x] Upstash Rate limit
+- [x] wretch Setup
+- [x] speaker Setup

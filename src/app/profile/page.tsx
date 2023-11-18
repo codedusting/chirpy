@@ -1,12 +1,18 @@
 "use client";
 
+import { speak } from "@/lib/speak";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Image from "next/image";
 
 export default function ProfileClient() {
 	const { user, error, isLoading } = useUser();
 
-	if (isLoading) return <div>Loading...</div>;
+	if (isLoading)
+		return (
+			<div tabIndex={0} onFocus={() => speak("Loading...")}>
+				Loading...
+			</div>
+		);
 	if (error) return <div>{error.message}</div>;
 
 	return (

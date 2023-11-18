@@ -1,3 +1,4 @@
+import KShorts from "@/components/client/kshorts";
 import { cn } from "@/lib/utils";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
 import { GoogleTagManager } from "@next/third-parties/google";
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					{children}
 				</body>
 			</UserProvider>
+			<KShorts />
 			<GoogleTagManager gtmId="GTM-NCPK38S2" />
 		</html>
 	);
