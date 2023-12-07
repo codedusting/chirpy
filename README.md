@@ -1,6 +1,6 @@
 # Chirpy - A sort of Twitter Clone
 
-This is just a live streaming project building for my channel:
+This is just a live-streaming project building for my channel:
 
 1. YouTube:
 2. Kick:
