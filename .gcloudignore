@@ -15,7 +15,8 @@
 .prettierrc
 .prettierignore
 app.yaml
-bun.lockb
+pnpm-lock.yaml
+package-lock.json
 components.json
 drizzle.config.ts
 next-env.d.ts
