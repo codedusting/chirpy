@@ -20,3 +20,8 @@ drizzle.config.ts
 next-env.d.ts
 playwright.config.ts
 next.config.js
+.github
+tailwind.config.ts
+tsconfig.json
+README.md
+bun.lockb

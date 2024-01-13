@@ -27,11 +27,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{github.event.inputs.branch}}
-      # - id: bun-setup
-      #   name: Setup Bun
-      #   uses: oven-sh/setup-bun@v1
-      #   with:
-      #     bun-version: "1.0.22"
       - id: node-setup
         name: Setup Node
         uses: actions/setup-node@v4
