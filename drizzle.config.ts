@@ -1,10 +1,10 @@
-import { type Config } from "drizzle-kit";
+import { defineConfig } from "drizzle-kit";
 
-export default {
+export default defineConfig({
 	schema: "./src/server/db/schema.ts",
-	driver: "mysql2",
+	out: "./src/server/db/migrations",
+	dialect: "postgresql",
 	dbCredentials: {
-		uri: process.env.DATABASE_DEV_URL!
-	},
-	tablesFilter: ["chirpy_*"]
-} satisfies Config;
+		url: process.env.DATABASE_URL!
+	}
+});

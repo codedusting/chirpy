@@ -1,11 +1,12 @@
-import { Client } from "@planetscale/database";
-import { drizzle } from "drizzle-orm/planetscale-serverless";
-
+import { drizzle } from "drizzle-orm/node-postgres";
+import { Client } from "pg";
 import * as schema from "./schema";
 
-export const db = drizzle(
-	new Client({
-		url: process.env.DATABASE_DEV_URL!
-	}).connection(),
-	{ schema }
-);
+async function dbPromise() {
+	const client = new Client({ connectionString: process.env.DATABASE_URL });
+	await client.connect();
+	const db = drizzle(client, { schema });
+	return db;
+}
+
+export default dbPromise;

@@ -1,34 +1,34 @@
 import { sql } from "drizzle-orm";
-import { bigint, index, mysqlTableCreator, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { index, pgEnum, pgTable, text, timestamp } from "drizzle-orm/pg-core";
+import { uuidv7 } from "uuidv7";
 
-export const mysqlTable = mysqlTableCreator((name) => `chirpy_${name}`);
+export const roleEnum = pgEnum("role", ["ADMIN", "FREE_USER", "PREMIUM_USER", "PREMIUM_PLUS_USER"]);
 
-export const posts = mysqlTable(
-	"post",
+export const users = pgTable(
+	"users",
 	{
-		id: bigint("id", { mode: "number" }).primaryKey().autoincrement(),
-		name: varchar("name", { length: 256 }),
-		createdAt: timestamp("created_at")
-			.default(sql`CURRENT_TIMESTAMP`)
+		id: text("id")
+			.$defaultFn(() => uuidv7())
+			.primaryKey()
 			.notNull(),
-		updatedAt: timestamp("updatedAt").onUpdateNow()
-	},
-	(example) => ({
-		nameIndex: index("name_idx").on(example.name)
-	})
-);
-
-export const users = mysqlTable(
-	"user",
-	{
-		id: bigint("id", { mode: "number" }).primaryKey().autoincrement(),
-		name: varchar("name", { length: 256 }),
-		createdAt: timestamp("created_at")
-			.default(sql`CURRENT_TIMESTAMP`)
+		username: text("username").unique().notNull(),
+		name: text("name"),
+		avatarUrl: text("avatar_url"),
+		email: text("email").unique().notNull(),
+		phone: text("phone"),
+		createdAt: timestamp("created_at", { mode: "string", withTimezone: true })
+			.defaultNow()
 			.notNull(),
-		updatedAt: timestamp("updatedAt").onUpdateNow()
+		updatedAt: timestamp("updated_at", { mode: "string", withTimezone: true })
+			.defaultNow()
+			.notNull()
+			.$onUpdate(() => sql`now()`),
+		role: roleEnum("role").default("FREE_USER").notNull()
 	},
-	(example) => ({
-		nameIndex: index("name_idx").on(example.name)
-	})
+	(table) => {
+		return {
+			idx: index("idx").on(table.id),
+			usernamex: index("usernamex").on(table.username)
+		};
+	}
 );
