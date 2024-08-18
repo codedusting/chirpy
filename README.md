@@ -35,12 +35,14 @@ This is just a live streaming project building for my channel:
 - [x] Upstash Rate limit
 - [x] wretch Setup
 - [x] speaker Setup
+- [] Migrations:
+  - [x] Remove planetscale as it's no longer Free Tier -> Move to Xata Postgres
+  - [x] Add theme-mode changer with proper logo change
+  - [x] Install all shadcn-ui components and do proper theming setup
+  - [] Clean up the app folder (except api/auth)
+  - [] Remove kShort+voice-setup and install cmd+k
 - [] These are must haves in any production app:
   - [] Great CWV Scores for real world users - image optimisation, LCP (core), FID (deprecated core metric from 2024 March), INP (new core metric), FCP, TBT, TTFB, CLS (core)
   - [] Proper analytics
   - [] Accessibility - vast topic, so standard level accessibility should be the aim for the starter.
   - [] Proper SEO - sitemaps, robots, metadata, etc.
-- [] Migrations:
-  - [x] Remove planetscale as it's no longer Free Tier -> Move to Xata Postgres
-  - [x] Add theme-mode changer with proper logo change
-  - []
