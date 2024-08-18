@@ -13,7 +13,21 @@ export const metadata: Metadata = {
 		template: `%s | Chirpy`,
 		default: "Chirpy"
 	},
-	description: "A kind of a twitter clone with Next.js."
+	description: "A kind of a twitter clone with NextJS",
+	icons: {
+		icon: [
+			{
+				media: "(prefers-color-scheme: light)",
+				url: "/assets/favicons/light/favicon.ico",
+				href: "/assets/favicons/light/favicon.ico"
+			},
+			{
+				media: "(prefers-color-scheme: dark)",
+				url: "/assets/favicons/dark/favicon.ico",
+				href: "/assets/favicons/dark/favicon.ico"
+			}
+		]
+	}
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
