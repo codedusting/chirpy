@@ -40,3 +40,7 @@ This is just a live streaming project building for my channel:
   - [] Proper analytics
   - [] Accessibility - vast topic, so standard level accessibility should be the aim for the starter.
   - [] Proper SEO - sitemaps, robots, metadata, etc.
+- [] Migrations:
+  - [] Remove planetscale as it's no longer Free Tier -> Move to Xata Postgres
+  - [] Add theme-mode changer with proper logo change
+  - []
