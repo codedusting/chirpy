@@ -39,8 +39,8 @@ This is just a live streaming project building for my channel:
   - [x] Remove planetscale as it's no longer Free Tier -> Move to Xata Postgres
   - [x] Add theme-mode changer with proper logo change
   - [x] Install all shadcn-ui components and do proper theming setup
-  - [] Clean up the app folder (except api/auth)
-  - [] Remove kShort+voice-setup and install cmd+k
+  - [x] Clean up the app folder (except api/auth)
+  - [] Install cmd+k
 - [] These are must haves in any production app:
   - [] Great CWV Scores for real world users - image optimisation, LCP (core), FID (deprecated core metric from 2024 March), INP (new core metric), FCP, TBT, TTFB, CLS (core)
   - [] Proper analytics
