@@ -1,12 +1,22 @@
-import KShorts from "@/components/client/kshorts";
 import { cn } from "@/lib/utils";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
 import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
+import { David_Libre, Inter } from "next/font/google";
 import "./globals.css";
+import { type ReactNode } from "react";
 
-const workSans = Work_Sans({ subsets: ["latin"], variable: "--workSans" });
+const davidLibre = David_Libre({
+	subsets: ["latin"],
+	weight: ["400", "700"],
+	variable: "--font-david-libre"
+});
+
+const interTight = Inter({
+	subsets: ["latin"],
+	weight: ["400", "600"],
+	variable: "--font-inter-tight"
+});
 
 export const metadata: Metadata = {
 	title: {
@@ -30,15 +40,20 @@ export const metadata: Metadata = {
 	}
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en">
 			<UserProvider>
-				<body className={cn("bg-background min-h-screen font-sans antialiased", workSans.variable)}>
+				<body
+					className={cn(
+						davidLibre.variable,
+						interTight.variable,
+						"min-h-screen bg-background font-sans antialiased"
+					)}
+				>
 					{children}
 				</body>
 			</UserProvider>
-			<KShorts />
 			<GoogleTagManager gtmId="GTM-NCPK38S2" />
 		</html>
 	);
